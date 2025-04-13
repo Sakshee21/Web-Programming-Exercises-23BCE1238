@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>23BCE1238_JS_EX10</title>
+    </head>
+    <body>
+        <h1 id="heading">This is the Title</h1>
+        <form>
+            <input type="text" value="John Doe" name="username" class="input-field"><br>
+            <input type="radio" name="gender" id="Male" value="Male" class="input-field">Male
+            <input type="radio" name="gender" id="Female" value="Female" class="input-field">Female
+            <br>
+            <input type="button" value="check gender" onclick="checkgender()" class="input-field">
+            <p class="info">hello</p>
+            <p class="info">how r u?</p>
+            <p class="info">how's life?</p>
+            <input type="button" value="check number of <p> tags" onclick="nump()" class="input-field">
+                <br><br>
+            <input type="button" value="Change bgcolor" onclick="changebgcolor()"><br><br>
+            <input type="button" value="Select first radio button" onclick="checkfirstradio()">
+        </form>
+
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Watermelon</li>
+            <li>Mango</li>
+        </ul>
+
+        <form>
+            <input type="checkbox" class="hobby" name="hobby" value="Singing">Singing
+            <input type="checkbox" class="hobby" name="hobby" value="Dancing">Dancing
+            <input type="checkbox" class="hobby" name="hobby" value="Reading Novels">Reading Novels
+            <input type="checkbox" class="hobby" name="hobby" value="Swimming">Swimming
+        </form>
+        
+        <br><br>
+        <script>
+            const newhead=document.getElementById("heading")
+            newhead.textContent="Updated Title"
+
+            function checkgender()
+            {
+                const gender=document.getElementsByName("gender");
+
+                for(let i=0;i<gender.length;i++)
+                {
+                    if(gender[i].checked)
+                    {
+                        alert("selected gender: "+gender[i].value);
+                        return;
+                    }
+                }
+
+                alert("No gender selected");
+
+            }
+
+            function nump()
+            {
+                const ptags=document.getElementsByTagName("p");
+                alert("The number of <p> tags is "+ptags.length);
+            }
+
+            const fruits=document.getElementsByTagName("li")
+            for (let i=0;i <fruits.length;i++) {
+                console.log(fruits[i].textContent);
+            }
+
+            function changebgcolor()
+            {
+                const inputs=document.getElementsByClassName("input-field");
+                for (let i=0;i<inputs.length;i++) {
+                    inputs[i].style.backgroundColor="lightblue";
+                }
+            }
+
+            const p1=document.querySelector(".info");
+            p1.textContent="This is the first info paragraph";
+
+            function checkfirstradio() {
+                document.querySelector('input[type="radio"]').checked = true; 
+            }
+
+            const ps=document.querySelectorAll(".info");
+            for(let i=0;i<ps.length;i++)
+            {
+                console.log(ps[i].textContent);
+            }
+
+            const hobbies=document.querySelectorAll(".hobby");
+            for(let i=0;i<hobbies.length;i++)
+            {
+                hobbies[i].checked=true;
+                console.log(hobbies[i].value);
+            }
+
+        </script>
+    </body>
+</html>

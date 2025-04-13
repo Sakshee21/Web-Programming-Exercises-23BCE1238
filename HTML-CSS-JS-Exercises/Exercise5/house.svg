@@ -1,0 +1,13 @@
+<svg width="1500" height="1500" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="84,329 198,139 311,330" fill="maroon" stroke="black" stroke-width="3"/>
+            <rect x="85" y="331" height="262" width="222" fill="brown" stroke="black" stroke-width="3"/>
+            <rect x="145" y="566" height="27" width="100" fill="grey" stroke="black" stroke-width="3"/>
+            <rect x="164" y="594" height="11" width="63" fill="grey" stroke="black" stroke-width="3"/>
+            <rect x="172" y="457" height="109" width="45" fill="saddlebrown" stroke="black" stroke-width="3"/>
+            <rect x="110" y="372" height="40" width="40" fill="skyblue" stroke="black" stroke-width="3"/>
+            <rect x="240" y="372" height="40" width="40" fill="skyblue" stroke="black" stroke-width="3"/>
+            <circle cx="196" cy="257" r="25" fill="yellow" stroke="black" stroke-width="3"/>
+            <polygon points="331,107 357,106 368,86 379,107 405,107 384,122 389,143 368,132 345,143 353,121" fill="yellow" stroke="black" stroke-width="3"/>  
+            <circle cx="460" cy="120" r="40" fill="yellow" stroke="black" stroke-width="3" />
+            <ellipse cx="470" cy="120" rx="32" ry="50" fill="white"/>
+          </svg>

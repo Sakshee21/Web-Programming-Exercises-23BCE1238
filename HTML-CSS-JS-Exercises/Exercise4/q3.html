@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+    <head>
+        <title>23BCE1238-Slider control</title>
+    </head>
+    <body>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)+parseInt(c.value)">
+            <div>Delivery(on a scale of 100): 0<input type="range" id="a" value="50" min="1" max="100">100+</div><br>
+            <div>Customer Service(on a scale of 50): 0<input type="range" id="b" value="20" min="1" max="50">50+</div><br>
+           <div>Product review(on a scale of 5 ):  0<input type="range" id="c" min="1" max="5" value="4">5+ </div>Aggregate review=<output id="x"></output>
+        </form>
+    </body>
+</html>

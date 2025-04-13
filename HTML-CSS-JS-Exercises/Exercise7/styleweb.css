@@ -1,0 +1,38 @@
+body {
+    font: 1.2em / 1.5 times-now-roman;
+    overflow: visible;
+    z-index: 5;
+  }
+.pet {
+    column-count: 3;
+    column-rule-style: solid;
+  }
+
+.rainbowtext{
+    text-align:center;
+    background-image:linear-gradient(to left,violet,indigo,blue,green,yellow,orange,red);
+    width:auto;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.container
+{
+    border:2px solid #444; 
+    padding:5px; 
+    margin:20px auto; 
+    width:80%; 
+    background-color:#f9f9f9; 
+    box-shadow:0 4px 8px rgba(0,0,0,0.2); 
+    border-radius:10px; 
+    z-index: 4;
+}
+
+.svg-ball {
+    position:absolute; 
+    top:50%; 
+    left: 50%; 
+    transform:translate(-50%, -50%);
+    z-index:10; 
+    width:100px;
+    height:100px;
+}

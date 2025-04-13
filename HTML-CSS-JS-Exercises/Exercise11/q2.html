@@ -1,0 +1,109 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <span id="time">00:00:00</span>
+        <form>
+            <input type="button" value="start" style="background-color:green" id="start" onclick="start()">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="stop" style="background-color:red" id="stop" onclick="stop()">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Reset" style="background-color:yellow" id="reset" onclick="reset()">&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+            Enter your D.O.B. indd//mm/yyyy format:<input type="text" id="date" name="date">
+            <input type="button" value="Submit" id="submit">
+            <p>Your age is: <span id="age"></span></p>
+        </form>
+        <script>
+            document.getElementById("submit").addEventListener("click",function(){
+                let datestring = document.getElementById("date").value;
+                let dateParts = datestring.split("/");
+                if (dateParts.length === 3) {
+                    let day = dateParts[0];
+                    let month = dateParts[1] - 1; 
+                    let year = dateParts[2];
+
+
+                    let age=2025-parseInt(year);
+                    document.getElementById("age").textContent = age;
+                    }
+                else{
+                    alert("Invalid date format");
+                }
+
+            });
+
+            let timer;
+            let seconds = 0, minutes = 0, hours = 0;
+
+            function updateTime() {
+                seconds++;
+                if (seconds == 60) {
+                    seconds = 0;
+                    minutes++;
+                }
+                if (minutes == 60) {
+                    minutes = 0;
+                    hours++;
+                }
+
+                let formattedTime = 
+                    (hours < 10 ? "0" + hours : hours) + ":" +
+                    (minutes < 10 ? "0" + minutes : minutes) + ":" +
+                    (seconds < 10 ? "0" + seconds : seconds);
+
+                document.getElementById("time").textContent = formattedTime;
+            }
+
+            document.getElementById("start").addEventListener("click", function() {
+                clearInterval(timer); 
+                timer = setInterval(updateTime, 1000);
+            });
+
+            document.getElementById("stop").addEventListener("click", function() {
+                clearInterval(timer);
+            });
+
+            document.getElementById("reset").addEventListener("click", function() {
+                clearInterval(timer);
+                seconds = 0;
+                minutes = 0;
+                hours = 0;
+                document.getElementById("time").textContent = "00:00:00";
+            });
+        </script>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea with Character Counter</title>
+</head>
+<body>
+    <form>
+        <label for="myTextarea">Enter text:</label><br>
+        <textarea id="myTextarea" rows="4" cols="50"></textarea><br>
+        <span id="charCount">0</span> / 200 characters
+    </form>
+
+    <script>
+        const textarea = document.getElementById("myTextarea");
+        const charCount = document.getElementById("charCount");
+
+
+        textarea.addEventListener("input", function() {
+        
+            const textLength = textarea.value.length;
+
+            charCount.textContent = textLength;
+
+            if (textLength > 200) {
+                textarea.value = textarea.value.substring(0, 200);
+                charCount.textContent = 200;
+            }
+        });
+    </script>
+</body>
+</html>

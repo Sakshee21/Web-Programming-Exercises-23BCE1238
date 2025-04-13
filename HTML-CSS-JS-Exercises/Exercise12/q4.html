@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>23BCE1238_EX12</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+        }
+
+        .plot {
+            width: 100%;
+            height: 400px; 
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Wine Production Charts</h1>
+
+    <div class="container">
+        <div id="plot1" class="plot"></div>
+        <div id="plot2" class="plot"></div>
+        <div id="plot3" class="plot"></div>
+        <div id="plot4" class="plot"></div>
+    </div>
+
+    <script>
+        const xarray = ["Italy", "France", "Spain", "USA", "India"];
+        const yarray = [55, 49, 44, 24, 15];
+
+        Plotly.newPlot("plot1", [{
+            x: xarray,
+            y: yarray,
+            type: "bar",
+            orientation: "v"
+        }], { title: "World Wide Wine Production" });
+
+        Plotly.newPlot("plot2", [{
+            x: yarray,
+            y: xarray,
+            type: "bar",
+            orientation: "h",
+            marker: { color: "rgba(255,0,0,0.6)" }
+        }], { title: "Horizontal Bar Chart" });
+
+ 
+        Plotly.newPlot("plot3", [{
+            labels: xarray,
+            values: yarray,
+            type: "pie"
+        }], { title: "Pie Chart" });
+
+    
+        Plotly.newPlot("plot4", [{
+            labels: xarray,
+            values: yarray,
+            type: "pie",
+            hole: 0.4
+        }], { title: "Donut Chart" });
+
+    </script>
+
+</body>
+
+</html>
