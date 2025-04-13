@@ -27,17 +27,19 @@ function Jokes()
     },[]);
 
 
-    return(
+    return (
         <>
-        <p>
-            {joke}
-        </p>
-
-
-        <button onClick={fetchJoke}>
-            Get Another Joke
-        </button>
+          {loading ? (
+            <p>Loading a hilarious joke...</p>
+          ) : (
+            <p>{joke}</p>
+          )}
+      
+          <button onClick={fetchJoke} disabled={loading}>
+            {loading ? 'Loading...' : 'Get Another Joke'}
+          </button>
         </>
-    );
+      );
+      
 }
 export default Jokes;
