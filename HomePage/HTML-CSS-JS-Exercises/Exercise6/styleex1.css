@@ -1,0 +1,82 @@
+.container 
+{
+    height:400px;
+    width:500px;
+    background-color:rgb(172, 216, 240);
+    padding:5px;
+}
+
+.calc {
+    width: 100%;
+    height: 100%;
+    border-collapse: separate; 
+    border-spacing: 10px; 
+}
+.calc td {
+    text-align: center;
+    background-color: white; 
+    padding: 15px; 
+    font-size: 20px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    box-shadow: 2px 2px 7px rgba(63, 92, 90, 0.2); 
+    cursor: pointer;
+    transition: 0.2s; 
+}
+.calc td.C 
+{
+    background-color:white;
+}
+.calc td.plus
+{
+    background-color:rgb(253, 220, 226);
+    border: 2px solid rgb(249, 214, 220);
+    border-radius: 7px;
+}
+.calc td.minus
+{
+    background-color:rgb(253, 220, 226);
+    border: 2px solid rgb(249, 214, 220); 
+    border-radius: 7px;
+}
+.calc td.divi
+{
+    background-color:rgb(253, 220, 226);
+    border: 2px solid rgb(249, 214, 220); 
+    border-radius: 7px;
+}
+.calc td.mul
+{
+    background-color:rgb(253, 220, 226);
+    border: 2px solid rgb(249, 214, 220);
+    border-radius: 7px;
+}
+
+.calc td.eq
+{
+    background-color:rgb(240, 247, 163);
+    border: 2px solid rgb(234, 230, 188); 
+    border-radius: 7px;
+}
+.calc td.one 
+{
+    background-color:rgb(225, 129, 211);
+    border: 2px solid rgb(232, 142, 190); 
+    border-radius: 7px;
+}
+
+.calc td[colspan="3"] {
+    background-color: rgb(86, 101, 109);
+    border: none;
+}
+
+.calc td:hover {
+    background-color: lightblue; 
+    transform: scale(1.05); 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calc td:active {
+    transform: scale(0.95); 
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4); 
+}

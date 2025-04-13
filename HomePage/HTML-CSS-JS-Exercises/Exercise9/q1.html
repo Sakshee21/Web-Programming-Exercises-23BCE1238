@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+    <title>23BCE1238_JS_EX9</title>
+    </head>
+    <body>
+    <table border>
+        <tr>
+            <th>Temperature</th>
+            <th>Category</th>
+        </tr>
+        <tbody id="ttable"></tbody>
+    </table>
+    <h1>Summary:</h1>
+    <p >Hot count:<span id="hotcount"></span></p>
+    <p >Pleasant Count:<span id="pleasantcount"></span></p>
+    <p >Cold Count:<span id="coldcount"></span></p>
+    
+    <script>
+        const temp=[55,62,68,74,59,45,41,58,60,67,65,78,82,88,91,92,90,93,87,80,78,79,72,68,61,59,55,65];
+        let hot=0,pleasant=0,cold=0;
+        let n=temp.length;
+        let tablebody = document.getElementById("ttable");
+        for(let i=0;i<n;i++)
+        {
+            let category;
+            if(temp[i]>=85)
+            {
+                category="HOT";
+                hot++;
+            }
+            else if(temp[i]>=60)
+            {
+                category="PLEASANT";
+                pleasant++;
+            }
+            else{
+                category="COLD";
+                cold++;
+            }
+            let row = tablebody.insertRow();
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.textContent = temp[i];
+            cell2.textContent = category;
+        }  
+    
+        document.getElementById("hotcount").textContent = hot;
+        document.getElementById("pleasantcount").textContent = pleasant;
+        document.getElementById("coldcount").textContent = cold;
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <title>Order Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            
+        }
+        .container {
+            padding: 20px;
+            width: 350px;
+            margin: auto;
+            border-radius: 8px;
+            color:black;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border-bottom: 1px solid white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Order Receipt</h2>
+        <p><strong>Name:</strong> <span id="customerName"></span></p>
+        <p><strong>Phone:</strong> <span id="phoneNumber"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+
+        <h3>Products Ordered</h3>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+            <tbody id="ordersum"></tbody>
+        </table>
+
+        <h3>Total Cost: $<span id="totalcost"></span></h3>
+    </div>
+
+    <script>
+        let order = JSON.parse(localStorage.getItem("order"));
+
+        if (order) {
+            document.getElementById("customerName").textContent = order.name;
+            document.getElementById("phoneNumber").textContent = order.num;
+            document.getElementById("email").textContent = order.email;
+
+            let ordersum = document.getElementById("ordersum");
+            let totalcost = 0;
+
+            order.products.forEach(product => {
+                let row = document.createElement("tr");
+                let total = product.price * product.quantity;
+                totalcost += total;
+
+                row.innerHTML = `
+                    <td>${product.name}</td>
+                    <td>${product.quantity}</td>
+                    <td>$${product.price}</td>
+                    <td>$${total}</td>
+                `;
+
+                ordersum.appendChild(row);
+            });
+
+            document.getElementById("totalcost").textContent = totalcost;
+        }
+    </script>
+
+</body>
+</html>
