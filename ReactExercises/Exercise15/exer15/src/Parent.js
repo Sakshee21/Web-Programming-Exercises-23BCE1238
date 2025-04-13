@@ -3,8 +3,6 @@ import Child from './Child';
 import logo from './logo.svg';
 function Parent()
 {
-    const msg="Hello Child!How are you???"
-    const url="logo.svg";
     const mail="you@gmail.com";
     const date=new Date().toLocaleString();
     return(
