@@ -1,0 +1,72 @@
+
+.profile-page {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.6; 
+}
+
+.profile-image img {
+  border: 3px solid #ddd;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover; 
+  transition: transform 0.3s; 
+}
+
+.profile-image img:hover {
+  transform: scale(1.05); 
+}
+
+
+.user-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f0f0f0; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.user-info h2 {
+  color: #333; 
+  font-size: 1.8rem;
+}
+
+.user-info p {
+  color: #555;
+  margin: 5px 0;
+}
+
+/* User Posts Styling */
+.user-posts {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.user-posts h3 {
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.user-posts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-posts li {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.user-posts li:hover {
+  background: #eaeaea; 
+}
