@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Exercises</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e2e8f0, #f8fafc); /* lighter background */
+      color: #111;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 2rem 1rem;
+      background: #111;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-bottom: 1px solid #444;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #facc15;
+    }
+
+    header div {
+      font-size: 1.2rem;
+      color: #d1d5db;
+      font-weight: bold;
+    }
+
+    .container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: #f9fafb;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: #1c1c1c;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #facc15;
+    }
+
+    @media(max-width: 600px) {
+      .card {
+        padding: 1.25rem;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header div {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Exercise Hub</h1>
+    <div>Sakshee Ujjwal Kumat | Registration No: 23BCE1238</div>
+  </header>
+  <div class="container">
+    <a href="\HTML-CSS-JS-Exercises\Exercise1\ex1.html" class="card"><h3>Exercise 1</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise2\index.html" class="card"><h3>Exercise 2</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise3\index.html" class="card"><h3>Exercise 3</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise4\index.html" class="card"><h3>Exercise 4</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise5\exercise5_mainpage.html" class="card"><h3>Exercise 5</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise6\index.html" class="card"><h3>Exercise 6</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise7\index.html" class="card"><h3>Exercise 7</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise8\ex18full.html" class="card"><h3>Exercise 8</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise9\index.html" class="card"><h3>Exercise 9</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise10\index.html" class="card"><h3>Exercise 10</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise11\index.html" class="card"><h3>Exercise 11</h3></a>
+    <a href="\HTML-CSS-JS-Exercises\Exercise12\index.html" class="card"><h3>Exercise 12</h3></a>
+  </div>
+</body>
+</html>
+
+</body>
+</html>
