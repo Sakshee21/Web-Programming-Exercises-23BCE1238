@@ -1,4 +1,3 @@
-import Parent from './Parent';
 import PropTypes from 'prop-types';
 
 
