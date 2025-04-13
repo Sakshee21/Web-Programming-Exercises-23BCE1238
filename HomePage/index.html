@@ -13,7 +13,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #e2e8f0, #f8fafc); /* lighter background */
+      background: linear-gradient(135deg, #e2e8f0, #f8fafc);
       color: #111;
       min-height: 100vh;
       display: flex;
@@ -21,7 +21,7 @@
     }
 
     header {
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
       background: #111;
       text-align: center;
       display: flex;
@@ -35,8 +35,8 @@
       color: #facc15;
     }
 
-    header div {
-      font-size: 1.2rem;
+    header div p {
+      font-size: 1.5rem;
       color: #d1d5db;
       font-weight: bold;
     }
@@ -75,6 +75,15 @@
       color: #facc15;
     }
 
+    footer {
+      background: #111;
+      color: #d1d5db;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid #444;
+      font-size: 1rem;
+    }
+
     @media(max-width: 600px) {
       .card {
         padding: 1.25rem;
@@ -87,14 +96,20 @@
       header div {
         font-size: 1rem;
       }
+
+      footer {
+        font-size: 0.9rem;
+        padding: 1rem 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Exercise Hub</h1>
-    <div>Sakshee Ujjwal Kumat | Registration No: 23BCE1238</div>
+    <h1>My Web Programming Exercises</h1>
+    <div><p>Sakshee Ujjwal Kumat </p> <p>23BCE1238</p></div>
   </header>
+
   <div class="container">
     <a href="\HTML-CSS-JS-Exercises\Exercise1\ex1.html" class="card"><h3>Exercise 1</h3></a>
     <a href="\HTML-CSS-JS-Exercises\Exercise2\index.html" class="card"><h3>Exercise 2</h3></a>
@@ -108,9 +123,14 @@
     <a href="\HTML-CSS-JS-Exercises\Exercise10\index.html" class="card"><h3>Exercise 10</h3></a>
     <a href="\HTML-CSS-JS-Exercises\Exercise11\index.html" class="card"><h3>Exercise 11</h3></a>
     <a href="\HTML-CSS-JS-Exercises\Exercise12\index.html" class="card"><h3>Exercise 12</h3></a>
+    <a href="https://celadon-lily-4eb2d9.netlify.app/" class="card"><h3>Exercise 13</h3></a>
+    <a href="https://whimsical-llama-d48b11.netlify.app/" class="card"><h3>Exercise 14</h3></a>
+    <a href="https://67fbc8385c70744a57883184--celadon-douhua-b97e8e.netlify.app/" class="card"><h3>Exercise 15</h3></a>
   </div>
-</body>
-</html>
 
+  <footer>
+    For Exercises 13 to 15 (React-based), the deployed links on Netlify can be accessed upon clicking the respective cards.<br />
+    Note: Questions for these are answered in order and can be accessed upon scrolling.
+  </footer>
 </body>
 </html>
